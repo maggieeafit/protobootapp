@@ -14,7 +14,7 @@
     <name>protobootapp</name>
     <description>A simple demo app for Spring Boot.</description>
     
-    <properties>
+    <properties><!-- este confiiguracion solo a nivel de nube-->
         <java.version>11</java.version>
     </properties>
     
@@ -57,7 +57,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
+            <plugin><!--java code coverage-->
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.10</version>
@@ -81,7 +81,7 @@
                         </goals>
                         <configuration>
                             <rules>
-                                <rule>
+                                <rule><!--cuente las lineas de codigo que se pueden recorrer vs ramas de ejecución en este caso un 70%-->
                                     <element>PACKAGE</element>
                                     <limits>
                                         <limit>
